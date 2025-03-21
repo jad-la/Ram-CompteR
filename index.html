@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compte à Rebours Ramadan 2025</title>
+    <title>Compte à Rebours Eid al-Fitr 2025</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,7 +51,7 @@
 </head>
 <body>
 
-    <h2>Ramadan commence dans :</h2>
+    <h2>Eid al-Fitr commence dans :</h2>
     <div class="countdown">
         <div class="time-box">
             <span id="days">00</span>
@@ -73,12 +73,12 @@
 
     <script>
         function updateCountdown() {
-            const ramadanDate = new Date("March 1, 2025 00:00:00").getTime();
+            const eidDate = new Date("April 1, 2025 00:00:00").getTime();
             const now = new Date().getTime();
-            const timeLeft = ramadanDate - now;
+            const timeLeft = eidDate - now;
 
             if (timeLeft <= 0) {
-                document.querySelector("h2").textContent = "Ramadan 2025 a commencé !";
+                document.querySelector("h2").textContent = "eid moubarak!";
                 document.querySelector(".countdown").style.display = "none";
                 return;
             }
