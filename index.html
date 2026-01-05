@@ -5,43 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compte à Rebours Offre</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background: #f5f0e6;
             color: #2d4a5e;
-            padding: 30px 20px;
+            padding: 20px 10px;
             margin: 0;
             overflow: hidden;
         }
         h2 {
-            font-size: 1.6rem;
-            margin-bottom: 25px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
             color: #2d4a5e;
+            padding: 0 10px;
         }
         .countdown {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
         }
         .time-box {
             background: #2d4a5e;
             color: white;
-            padding: 15px 20px;
+            padding: 12px 15px;
             border-radius: 10px;
             text-align: center;
-            min-width: 70px;
+            min-width: 65px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         .time-box span {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: bold;
             display: block;
         }
         .time-box p {
             margin: 5px 0 0 0;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             font-weight: 600;
         }
@@ -50,8 +55,8 @@
             background: #3b5998;
             color: white;
             text-decoration: none;
-            padding: 15px 40px;
-            font-size: 1.1rem;
+            padding: 12px 30px;
+            font-size: 1rem;
             font-weight: bold;
             border-radius: 50px;
             box-shadow: 0 4px 15px rgba(59,89,152,0.3);
@@ -61,23 +66,50 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(59,89,152,0.5);
         }
+
+        /* MOBILE */
         @media screen and (max-width: 480px) {
+            body {
+                padding: 15px 5px;
+            }
             h2 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+            }
+            .countdown {
+                gap: 6px;
             }
             .time-box {
-                padding: 10px 12px;
+                padding: 8px 10px;
                 min-width: 50px;
+                border-radius: 8px;
             }
             .time-box span {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
             .time-box p {
-                font-size: 0.7rem;
+                font-size: 0.6rem;
             }
             .btn-offre {
-                padding: 12px 30px;
-                font-size: 1rem;
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* TRÈS PETIT ÉCRAN */
+        @media screen and (max-width: 350px) {
+            h2 {
+                font-size: 0.95rem;
+            }
+            .time-box {
+                padding: 6px 8px;
+                min-width: 45px;
+            }
+            .time-box span {
+                font-size: 1.3rem;
+            }
+            .time-box p {
+                font-size: 0.55rem;
             }
         }
     </style>
@@ -104,7 +136,7 @@
     </div>
     
     <a href="https://www.oumanourcreations.com/livret-dactivites-a-la-decouverte-du-prophete-mohamed-" target="_blank" class="btn-offre">
-        Profiter de l'offre
+         Profiter de l'offre
     </a>
 
     <script>
