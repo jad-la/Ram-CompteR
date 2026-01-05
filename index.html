@@ -8,9 +8,20 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background: transparent;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 20px;
+            padding: 30px 20px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         .countdown {
             display: flex;
@@ -19,25 +30,43 @@
         }
         .time-box {
             background: white;
-            color: #008080;
-            padding: 10px;
-            border-radius: 5px;
+            color: #764ba2;
+            padding: 15px 20px;
+            border-radius: 10px;
             text-align: center;
-            min-width: 60px;
+            min-width: 70px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         .time-box span {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             font-weight: bold;
             display: block;
         }
         .time-box p {
-            margin: 0;
+            margin: 5px 0 0 0;
             font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        @media screen and (max-width: 480px) {
+            h2 {
+                font-size: 1.3rem;
+            }
+            .time-box {
+                padding: 10px 12px;
+                min-width: 50px;
+            }
+            .time-box span {
+                font-size: 1.8rem;
+            }
+            .time-box p {
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h2>Offre se termine dans :</h2>
+    <h2>🔥 L'offre se termine dans :</h2>
     <div class="countdown">
         <div class="time-box">
             <span id="days">00</span>
@@ -58,14 +87,12 @@
     </div>
     <script>
         function updateCountdown() {
-            // 5 janvier 2026 à 12h00 heure française (UTC+1)
             const endDate = new Date("2026-01-05T12:00:00+01:00").getTime();
-            
             const now = new Date().getTime();
             const timeLeft = endDate - now;
 
             if (timeLeft <= 0) {
-                document.querySelector("h2").textContent = "Offre terminée !";
+                document.querySelector("h2").textContent = "⏰ Offre terminée !";
                 document.querySelector(".countdown").style.display = "none";
                 return;
             }
